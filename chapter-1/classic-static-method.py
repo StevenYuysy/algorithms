@@ -19,11 +19,6 @@ def isPrime(n):
                 break
         return True
 
-# get aqrt use Newton's method
-
-def sqrt(c):
-    if c < 0:
-
 # count hypotenuse in triangle
 
 def hypotenuse(a, b):
