@@ -17,3 +17,5 @@ def createArray(N):
         for j in range(N):
             table[i][j] = getGCD(i ,j)
     return table
+
+print (createArray(6))
