@@ -9,7 +9,20 @@ triples that sum to exactly 0 (Intergers are different in this array)
 统计所有和为 0 的三整数元组的数量（数组内整数均不相等）
 '''
 
+import random
 from time import time
+
+
+'''
+Get random intergers without repeatde
+'''
+def randomIntergerArray(min, max, length):
+    result = []
+    for i in range(length):
+        result.append(random.randint(min, max))
+    result = list(set(result))
+    return result
+
 
 def BinarySearch(input, key):
     lo = 0
@@ -26,7 +39,6 @@ def BinarySearch(input, key):
 
 
 class ThreeSum(object):
-    """docstring for ThreeSum."""
 
     def count(self, input):
         start = time()
@@ -40,7 +52,7 @@ class ThreeSum(object):
                         result.append([input[i], input[j], input[k]])
                         cnt += 1
         end = time()
-        print 'time: %s, count: %d,  array: %s' % (end - start, cnt, result)
+        print 'time: %s, count: %d' % (end - start, cnt)
 
     def countFast(self, input):
         start = time()
@@ -54,7 +66,7 @@ class ThreeSum(object):
                     result.append([input[i], input[j], -input[i]-input[j]])
                     cnt += 1
         end = time()
-        print 'time: %s, count: %d,  array: %s' % (end - start, cnt, result)
+        print 'time: %s, count: %d' % (end - start, cnt)
 
 
 class TwoSum(object):
@@ -71,7 +83,7 @@ class TwoSum(object):
                     result.append([input[i], input[j]])
                     cnt += 1
         end = time()
-        print 'time: %s, count: %d,  array: %s' % (end - start, cnt, result)
+        print 'time: %s, count: %d' % (end - start, cnt)
 
     def countFast(self, input):
         start = time()
@@ -84,14 +96,13 @@ class TwoSum(object):
                 result.append([input[i], -input[i]])
                 cnt += 1
         end = time()
-        print 'time: %s, count: %d,  array: %s' % (end - start, cnt, result)
+        print 'time: %s, count: %d' % (end - start, cnt)
 
 threesum = ThreeSum()
 twosum = TwoSum()
-input = [-1, -2, -5, 1, 0, 2, 10, 23, -6, 42, 3, 22, -10, 40, 41, 55, \
-11, -14, -5, -3, 90, 19, 13, -22, 33, 7, -8, 9, 25, -29, 66, 43, -60, \
-80, 88, 100, -200, -300, 567, 322, 102, 569, 321, 221, 240, 432, 564, \
--222, -444, 143, 654, 323, 76, 54, -87, -44]
+
+input = randomIntergerArray(-100000, 100000, 1000)
+
 # twosum.count(input)
 # twosum.countFast(input)
 threesum.count(input)
