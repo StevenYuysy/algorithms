@@ -15,7 +15,7 @@ from time import time
 
 
 '''
-Get random intergers without repeatde
+Get random intergers without repeated
 '''
 def randomIntergerArray(min, max, length):
     result = []
