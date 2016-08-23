@@ -6,7 +6,7 @@ class Stack:
         self.items = []
 
     def isEmpty(self):
-        return len(self.items)==0
+        return len(self.items) == 0
 
     def push(self, item):
         self.items.append(item)
@@ -16,7 +16,7 @@ class Stack:
 
     def peek(self):
         if not self.isEmpty():
-            return self.items[len(self.items)-1]
+            return self.items[len(self.items) - 1]
 
     def size(self):
         return len(self.items)
