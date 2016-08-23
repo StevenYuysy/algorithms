@@ -1,3 +1,4 @@
+# A very claasic BinarySearch
 
 def BinarySearch(input, key):
     lo = 0
@@ -11,7 +12,3 @@ def BinarySearch(input, key):
         else:
             return mid
     return -1
-
-a = [1, 4, 5, 6, 11, 15, 20, 30, 31, 35]
-
-print(BinarySearch(a, 32))

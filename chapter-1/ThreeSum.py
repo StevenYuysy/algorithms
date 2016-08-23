@@ -10,6 +10,7 @@ triples that sum to exactly 0 (Intergers are different in this array)
 '''
 
 import random
+from BinarySearch import BinarySearch
 from time import time
 
 
@@ -22,21 +23,6 @@ def randomIntergerArray(min, max, length):
         result.append(random.randint(min, max))
     result = list(set(result))
     return result
-
-
-def BinarySearch(input, key):
-    lo = 0
-    hi = len(input) - 1
-    while(lo <= hi):
-        mid = int(lo + (hi-lo) / 2)
-        if (key < input[mid]):
-            hi = mid - 1
-        elif (key > input[mid]):
-            lo = mid + 1
-        else:
-            return mid
-    return -1
-
 
 class ThreeSum(object):
 
@@ -101,9 +87,9 @@ class TwoSum(object):
 threesum = ThreeSum()
 twosum = TwoSum()
 
-input = randomIntergerArray(-100000, 100000, 1000)
+input = randomIntergerArray(-1000, 1000, 100)
 
-# twosum.count(input)
-# twosum.countFast(input)
+twosum.count(input)
+twosum.countFast(input)
 threesum.count(input)
 threesum.countFast(input)

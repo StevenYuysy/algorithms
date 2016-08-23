@@ -1,4 +1,4 @@
-# array practice
+# boolean array practice
 
 def getGCD(a, b):
     if a < b:

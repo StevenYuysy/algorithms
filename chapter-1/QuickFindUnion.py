@@ -1,6 +1,26 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 '''
-quick-union algorithm
+Quick-union.
+It is based on the same data structure—the site-indexed id[] array—but it uses a
+different interpretation of the values that leads to more complicated structures.
+Specifically, the id[] entry for each site will be the name of another site in
+the same component (possibly itself). To implement find() we start at the given
+site, follow its link to another site, follow that sites link to yet another
+site, and so forth, following links until reaching a root, a site that has a
+link to itself. Two sites are in the same component if and only if this process
+leads them to the same root. To validate this process, we need union() to
+maintain this invariant, which is easily arranged: we follow links to find the
+roots associated with each of the given sites, then rename one of the components
+by linking one of these roots to the other.
+快速连通算法。
+它基于同样的数据结构-以触点作为索引的 id[] 数组，但我们赋予这些值得意义不同，我们需要用它们来
+定义更加复杂的结构。确切的说，每个触点所对应的 id[] 元素都是同一个分量中的另一个触点的名称（也
+有可能是它自己）我们将这种方法称为链接。在实现 find() 方法时，我们从给定的触点开始，由它的链接
+得到另一个触点，再由这个触点的链接到达第三个触点，如此继续跟随着链接直到到达一个跟驻点。
 '''
+
+from time import time
 
 class UF(object):
 
@@ -27,11 +47,11 @@ class UF(object):
         self.id[pRoot] = qRoot
         self.count -= 1
 
-with open('../test-data/mediumUF.txt', 'r') as f:
+with open('../test-data/largeUF.txt', 'r') as f:
     # read the site counts
     N = int(f.readline())
     uf = UF(N)
-
+    start = time()
     for line in f.readlines():
         readIn = line.strip().split(' ')
         p = int(readIn[0])
@@ -40,5 +60,5 @@ with open('../test-data/mediumUF.txt', 'r') as f:
             continue
         uf.union(p, q)
         print '%d %d' %(p, q)
-
-    print '%d components' % uf.count
+    end = time()
+    print '%d components \ntotal time: %s' % (uf.count, end-start)
