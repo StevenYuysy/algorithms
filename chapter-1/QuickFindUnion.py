@@ -14,10 +14,10 @@ maintain this invariant, which is easily arranged: we follow links to find the
 roots associated with each of the given sites, then rename one of the components
 by linking one of these roots to the other.
 快速连通算法。
-它基于同样的数据结构-以触点作为索引的 id[] 数组，但我们赋予这些值得意义不同，我们需要用它们来
+它基于同样的数据结构-以触点作为索引的 id[] 数组，但我们赋予这些值的意义不同，我们需要用它们来
 定义更加复杂的结构。确切的说，每个触点所对应的 id[] 元素都是同一个分量中的另一个触点的名称（也
 有可能是它自己）我们将这种方法称为链接。在实现 find() 方法时，我们从给定的触点开始，由它的链接
-得到另一个触点，再由这个触点的链接到达第三个触点，如此继续跟随着链接直到到达一个跟驻点。
+得到另一个触点，再由这个触点的链接到达第三个触点，如此继续跟随着链接直到到达一个跟触点。
 '''
 
 from time import time
