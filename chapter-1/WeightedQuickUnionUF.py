@@ -21,10 +21,7 @@ class UF(object):
 
     def connected(self, p, q):
         return self.find(p) == self.find(q)
-
-    def getCount(self):
-        return self.__count
-
+        
     def find(self, p):
         # find the root of the point
         while p != self.id[p]:
