@@ -5,7 +5,7 @@ import random
 from time import time
 
 def getRandomNumber(min, max):
-    return int(random.randint(min ,max))
+    return random.randint(min ,max)
 
 def getRandomNumbers(min, max, length):
     result = []
@@ -14,9 +14,7 @@ def getRandomNumbers(min, max, length):
     return result
 
 def getEscRandomNumbers(min, max, length):
-    result = getRandomNumbers(min, max, length)
-    result.sort()
-    return result
+    return getRandomNumbers(min, max, length).sort()
 
 def noRepeat(array):
     return list(set(array))
