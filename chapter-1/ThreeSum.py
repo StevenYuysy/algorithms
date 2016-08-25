@@ -13,7 +13,6 @@ import sys
 sys.path.append('../')
 
 from BinarySearch import BinarySearch
-from time import time
 from generator import *
 
 class ThreeSum(object):
