@@ -37,5 +37,12 @@ def insertion(array):
 
     return array
 
-array = [0, 2, 4, 5, 1, 10, 9, 42, 1, 4, 11, 15, 16, 13]
-print insertion(array)
+if __name__ == "__main__":
+
+    import sys
+    sys.path.append('../')
+    from generator import *
+
+    input = getRandomNumbers(0, 10000, 100)
+
+    print insertion(input)
