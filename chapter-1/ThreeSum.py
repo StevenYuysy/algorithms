@@ -9,20 +9,12 @@ triples that sum to exactly 0 (Intergers are different in this array)
 统计所有和为 0 的三整数元组的数量（数组内整数均不相等）
 '''
 
-import random
+import sys
+sys.path.append('../')
+
 from BinarySearch import BinarySearch
 from time import time
-
-
-'''
-Get random intergers without repeated
-'''
-def randomIntergerArray(min, max, length):
-    result = []
-    for i in range(length):
-        result.append(random.randint(min, max))
-    result = list(set(result))
-    return result
+from generator import *
 
 class ThreeSum(object):
 
@@ -87,7 +79,7 @@ class TwoSum(object):
 threesum = ThreeSum()
 twosum = TwoSum()
 
-input = randomIntergerArray(-1000, 1000, 100)
+input = noRepeat(getRandomNumber(-1000, 1000, 100))
 
 twosum.count(input)
 twosum.countFast(input)
