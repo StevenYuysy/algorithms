@@ -12,3 +12,15 @@ def BinarySearch(input, key):
         else:
             return mid
     return -1
+
+if __name__ == "__main__":
+
+    import sys
+    sys.path.append('../')
+
+    from generator import *
+
+    input = getEscRandomNumbers(0, 10000, 10)
+    index = getRandomNumber(0, 9)
+    print 'find key: %s index: %d in %s' % (input[index], index, input)
+    print BinarySearch(input, input[index])
