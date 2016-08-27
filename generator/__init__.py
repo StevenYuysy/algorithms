@@ -54,7 +54,7 @@ def getEscRandomNumbers(min, max, length):
 
 def noRepeat(array):
 
-    """Product `amount` random numbers between `min` and `max`, list at esc order.
+    """Get no-repeat data.
 
     Args:
         array: An array that need to get no-repeat data.
@@ -62,5 +62,5 @@ def noRepeat(array):
     Returns:
         An array. For example: [1, 2, 5, 6, 10, 21, 31]
     """
-    
+
     return list(set(array))
