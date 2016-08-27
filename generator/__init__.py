@@ -49,8 +49,9 @@ def getEscRandomNumbers(min, max, length):
     Returns:
         An array. For example: [1, 2, 5, 6, 10, 21, 31]
     """
-
-    return getRandomNumbers(min, max, length).sort()
+    
+    result = sorted(getRandomNumbers(min, max, length))
+    return result
 
 def noRepeat(array):
 
