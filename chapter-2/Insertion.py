@@ -1,6 +1,6 @@
 #! usr/bin/python
 # -*- coding: utf-8 -*-
-'''
+"""
 Insertion
 
 The algorithm that people often use to sort bridge hands is to consider the
@@ -16,7 +16,7 @@ Average case performance О(n^2)
 现中，为了给更小的元素腾出空间，我们需要将其余所有元素在插入之前都向右移动一位。
 
 时间复杂度 O(n^2)
-'''
+"""
 
 def insertion(array):
     if len(array) == 1:

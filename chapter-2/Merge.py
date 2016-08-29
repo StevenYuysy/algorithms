@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-'''
+"""
 Merge sort
 Average case performance O(nlogn)
 
 归并排序
 平均时间复杂度	O(nlogn)
-'''
+"""
 
 def merge(array, lo, mid, hi):
     """Abstract in-place merge.

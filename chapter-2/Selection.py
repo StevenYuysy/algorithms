@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-'''
+"""
 Selection sort.
 
 One of the simplest sorting algorithms works as follows: First,
@@ -17,7 +17,7 @@ Average case performance О(n^2)
 再次，在剩下的元素找到最小的元素，将它与数组的第二个元素交换位置。如此往复，直到将整个数组排序。
 
 时间复杂度 O(n^2)
-'''
+"""
 def selection(array):
     if len(array) == 1:
         return array
