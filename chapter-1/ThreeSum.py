@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 Algorithms Pracitice: ThreeSum question
 A program with cubic running time. Reads n integers and counts the number of
 triples that sum to exactly 0 (Intergers are different in this array)
 算法训练： 三元和的问题
 统计所有和为 0 的三整数元组的数量（数组内整数均不相等）
-'''
+"""
 
 import sys
 sys.path.append('../')

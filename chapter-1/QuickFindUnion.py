@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-'''
+"""
 Quick-union.
 It is based on the same data structure—the site-indexed id[] array—but it uses a
 different interpretation of the values that leads to more complicated structures.
@@ -18,7 +18,7 @@ by linking one of these roots to the other.
 定义更加复杂的结构。确切的说，每个触点所对应的 id[] 元素都是同一个分量中的另一个触点的名称（也
 有可能是它自己）我们将这种方法称为链接。在实现 find() 方法时，我们从给定的触点开始，由它的链接
 得到另一个触点，再由这个触点的链接到达第三个触点，如此继续跟随着链接直到到达一个跟触点。
-'''
+"""
 
 from time import time
 
@@ -47,18 +47,20 @@ class UF(object):
         self.id[pRoot] = qRoot
         self.count -= 1
 
-with open('../test-data/largeUF.txt', 'r') as f:
-    # read the site counts
-    N = int(f.readline())
-    uf = UF(N)
-    start = time()
-    for line in f.readlines():
-        readIn = line.strip().split(' ')
-        p = int(readIn[0])
-        q = int(readIn[1])
-        if (uf.connected(p, q)):
-            continue
-        uf.union(p, q)
-        print '%d %d' %(p, q)
-    end = time()
-    print '%d components \ntotal time: %s' % (uf.count, end-start)
+if __name__ == "__main__":
+
+    with open('../test-data/largeUF.txt', 'r') as f:
+        # read the site counts
+        N = int(f.readline())
+        uf = UF(N)
+        start = time()
+        for line in f.readlines():
+            readIn = line.strip().split(' ')
+            p = int(readIn[0])
+            q = int(readIn[1])
+            if (uf.connected(p, q)):
+                continue
+            uf.union(p, q)
+            print '%d %d' %(p, q)
+        end = time()
+        print '%d components \ntotal time: %s' % (uf.count, end-start)
