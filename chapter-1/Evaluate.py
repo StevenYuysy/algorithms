@@ -1,31 +1,8 @@
 import math
 
-class Stack:
-    ''' a Stack Class'''
-    def __init__(self):
-        self.items = []
-
-    def isEmpty(self):
-        return len(self.items) == 0
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        return self.items.pop()
-
-    def peek(self):
-        if not self.isEmpty():
-            return self.items[len(self.items) - 1]
-
-    def size(self):
-        return len(self.items)
-
-# only support Interger
-
 def Evaluate(input):
-    ops = Stack()
-    vals = Stack()
+    ops = []
+    vals = []
 
     for s in input.split(' '):
         if s == '+' \
@@ -33,7 +10,7 @@ def Evaluate(input):
         or s == '*' \
         or s == '/' \
         or s == 'sqrt':
-            ops.push(s)
+            ops.append(s)
 
         elif s == '(':
             continue
@@ -51,14 +28,15 @@ def Evaluate(input):
                 v = vals.pop() / v
             elif op == 'sqrt':
                 v = math.sqrt(v)
-            vals.push(v)
+            vals.append(v)
 
         else:
-            vals.push(int(s))
+            vals.append(int(s))
 
     print(vals.pop())
 
+if __name__ == "__main__":
 
-Evaluate('( 5 - ( 1 + 1 ) )')
-Evaluate('( 1 + ( ( 2 + 3 ) * ( 4 + 5 ) ) )')
-Evaluate('( ( 1 + sqrt ( 5 ) ) / 2 )')
+    Evaluate('( 5 - ( 1 + 1 ) )')
+    Evaluate('( 1 + ( ( 2 + 3 ) * ( 4 + 5 ) ) )')
+    Evaluate('( ( 1 + sqrt ( 5 ) ) / 2 )')
