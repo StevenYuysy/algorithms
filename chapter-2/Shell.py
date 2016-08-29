@@ -1,7 +1,7 @@
 #! usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 Shellsort
 
 Shellsort is a simple extension of insertion sort that gains speed by allowing
@@ -21,12 +21,12 @@ Average case performance depends on gap sequence
 最优时间复杂度	O(n)
 平均时间复杂度	根据步长序列的不同而不同。
 
-'''
+"""
 import math
 
 def shell(array):
     h = 1
-    while h < int(math.floor(len(array)/3)):
+    while h < int(math.floor(len(array)//3)):
         h = 3*h + 1
 
     while h >= 1:
@@ -37,7 +37,7 @@ def shell(array):
                 array[j] = array[j-h]
                 j -= h
             array[j] = insertion
-        h = int(math.floor(h/3))
+        h = int(math.floor(h//3))
     return array
 
 
