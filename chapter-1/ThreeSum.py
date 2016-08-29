@@ -17,7 +17,8 @@ from generator import *
 
 class ThreeSum(object):
 
-    def count(self, input):
+    @staticmethod
+    def count(input):
         start = time()
         cnt = 0
         result = []
@@ -31,7 +32,8 @@ class ThreeSum(object):
         end = time()
         print 'time: %s, count: %d' % (end - start, cnt)
 
-    def countFast(self, input):
+    @staticmethod
+    def countFast(input):
         start = time()
         cnt = 0
         result = []
@@ -48,7 +50,8 @@ class ThreeSum(object):
 
 class TwoSum(object):
 
-    def count(self, input):
+    @staticmethod
+    def count(input):
 
         start = time()
         cnt = 0
@@ -62,7 +65,8 @@ class TwoSum(object):
         end = time()
         print 'time: %s, count: %d' % (end - start, cnt)
 
-    def countFast(self, input):
+    @staticmethod
+    def countFast(input):
         start = time()
         cnt = 0
         result = []
@@ -75,12 +79,9 @@ class TwoSum(object):
         end = time()
         print 'time: %s, count: %d' % (end - start, cnt)
 
-threesum = ThreeSum()
-twosum = TwoSum()
+input = noRepeat(getRandomNumbers(-1000, 1000, 100))
 
-input = noRepeat(getRandomNumber(-1000, 1000, 100))
-
-twosum.count(input)
-twosum.countFast(input)
-threesum.count(input)
-threesum.countFast(input)
+TwoSum.count(input)
+TwoSum.countFast(input)
+ThreeSum.count(input)
+ThreeSum.countFast(input)
