@@ -45,4 +45,4 @@ if __name__ == "__main__":
 
     input = getRandomNumbers(0, 10000, 100)
 
-    print insertion(input)
+    print(insertion(input))

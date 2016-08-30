@@ -51,4 +51,4 @@ if __name__ == "__main__":
     from generator import *
 
     input = getRandomNumbers(0, 10000, 100)
-    print quicksort(input)
+    print(quicksort(input))

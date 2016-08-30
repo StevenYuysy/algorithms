@@ -49,4 +49,4 @@ if __name__ == "__main__":
 
     input = getRandomNumbers(0, 10000, 100)
 
-    print shell(input)
+    print(shell(input))
