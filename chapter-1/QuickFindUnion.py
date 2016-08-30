@@ -61,6 +61,6 @@ if __name__ == "__main__":
             if (uf.connected(p, q)):
                 continue
             uf.union(p, q)
-            print '%d %d' %(p, q)
+            print('%d %d' %(p, q))
         end = time()
-        print '%d components \ntotal time: %s' % (uf.count, end-start)
+        print('%d components \ntotal time: %s' % (uf.count, end-start))

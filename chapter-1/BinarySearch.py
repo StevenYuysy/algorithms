@@ -22,5 +22,5 @@ if __name__ == "__main__":
 
     input = getEscRandomNumbers(0, 10000, 10)
     index = getRandomNumber(0, 9)
-    print 'find key: %s index: %d in %s' % (input[index], index, input)
-    print BinarySearch(input, input[index])
+    print('find key: %s index: %d in %s' % (input[index], index, input))
+    print('return: %s' % BinarySearch(input, input[index]))

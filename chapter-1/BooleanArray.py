@@ -25,5 +25,5 @@ def createArray(N):
 
 if __name__ == "__main__":
 
-    N = raw_input('size --> ')
-    print (createArray(int(N)))
+    N = input('size --> ')
+    print(createArray(int(N)))

@@ -30,7 +30,7 @@ class ThreeSum(object):
                         result.append([input[i], input[j], input[k]])
                         cnt += 1
         end = time()
-        print 'time: %s, count: %d' % (end - start, cnt)
+        print('time: %s, count: %d' % (end - start, cnt))
 
     @staticmethod
     def countFast(input):
@@ -45,7 +45,7 @@ class ThreeSum(object):
                     result.append([input[i], input[j], -input[i]-input[j]])
                     cnt += 1
         end = time()
-        print 'time: %s, count: %d' % (end - start, cnt)
+        print('time: %s, count: %d' % (end - start, cnt))
 
 
 class TwoSum(object):
@@ -63,7 +63,7 @@ class TwoSum(object):
                     result.append([input[i], input[j]])
                     cnt += 1
         end = time()
-        print 'time: %s, count: %d' % (end - start, cnt)
+        print('time: %s, count: %d' % (end - start, cnt))
 
     @staticmethod
     def countFast(input):
@@ -77,7 +77,7 @@ class TwoSum(object):
                 result.append([input[i], -input[i]])
                 cnt += 1
         end = time()
-        print 'time: %s, count: %d' % (end - start, cnt)
+        print('time: %s, count: %d' % (end - start, cnt))
 
 input = noRepeat(getRandomNumbers(-1000, 1000, 100))
 

@@ -3,7 +3,7 @@ A playground for practicing algorithms, base on Algorithms fourth edition.
 
 # How to use
 ```
-git clone
+git clone https://github.com/StevenYuysy/algorithms.git
 cd path/to/any-chapter
-python filename.py
+python3 filename.py
 ```
