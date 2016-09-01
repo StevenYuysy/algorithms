@@ -78,14 +78,14 @@ if __name__ == "__main__":
     sys.path.append('../')
     from generator import *
 
-    input = getRandomNumbers(0, 100, 10)
+    data = getRandomNumbers(0, 100, 10)
     M = 5
-    print('test-data: %s' % input)
+    print('test-data: %s' % data)
     print('test-size: %d' % M)
     pq = MaxPQ()
     result = []
-    for i in range(len(input)-1):
-        pq.insert(input[i])
+    for i in range(len(data)-1):
+        pq.insert(data[i])
         if pq.size() > M: pq.delMax()
 
     while not pq.isEmpty(): result.append(pq.delMax())

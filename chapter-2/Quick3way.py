@@ -43,5 +43,7 @@ if __name__ == "__main__":
     sys.path.append('../')
     from generator import *
 
-    input = getRandomNumbers(0, 10000, 100)
-    print(quick3way(input))
+    data = getRandomNumbers(0, 1000, 15)
+    print('Quick-three-way Sort')
+    print('> input: %s' % data)
+    print('> output: %s' % quick3way(data))

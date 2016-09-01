@@ -43,6 +43,7 @@ if __name__ == "__main__":
     sys.path.append('../')
     from generator import *
 
-    input = getRandomNumbers(0, 10000, 100)
-
-    print(insertion(input))
+    data = getRandomNumbers(0, 1000, 15)
+    print('Insertion Sort')
+    print('> input: %s' % data)
+    print('> output: %s' % insertion(data))

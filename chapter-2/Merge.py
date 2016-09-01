@@ -69,7 +69,7 @@ def sort(array, lo, hi):
     mid = lo + (hi - lo) // 2
     sort(array, lo, mid)
     sort(array, mid+1, hi)
-    print('merge(array, %s, %s, %s)' % (lo, mid, hi))
+    # print('merge(array, %s, %s, %s)' % (lo, mid, hi))
     return merge(array, lo, mid, hi)
 
 def sortBU(array):
@@ -94,8 +94,8 @@ def sortBU(array):
     while sz < N:
         lo = 0
         while lo < N - sz:
-            print('sz : %s, merge(array, %s, %s, %s)' \
-             % (sz, lo, lo+sz-1, min(int(lo+sz+sz-1), int(N-1))))
+            # print('sz : %s, merge(array, %s, %s, %s)' \
+            #  % (sz, lo, lo+sz-1, min(int(lo+sz+sz-1), int(N-1))))
             result = merge(array, lo, lo+sz-1, min(int(lo+sz+sz-1), int(N-1)))[:]
             lo += sz + sz
         sz = sz + sz
@@ -107,6 +107,10 @@ if __name__ == "__main__":
     sys.path.append('../')
     from generator import *
 
-    input = getRandomNumbers(0, 1000, 16)
-    print('type: sort from top 2 bottom: %s' % sort(input, 0, len(input)-1))
-    print('type: sort form bottom 2 top %s' % sortBU(input))
+    data = getRandomNumbers(0, 1000, 15)
+    print('Merge Sort')
+    print('> input %s' % data)
+    print('> type: sort from top 2 bottom')
+    print('> output: %s' % sort(data, 0, len(data)-1))
+    print('> type: sort form bottom 2 top')
+    print('>output %s' % sortBU(data))
