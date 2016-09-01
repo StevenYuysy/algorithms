@@ -4,12 +4,12 @@ class MinPQ(object):
     This implementation uses a binary heap.
 
     Attributes:
-        _queue: A priority queue.
+        __queue: A priority queue.
     """
 
     def __init__(self):
         """Init a priority queue, we do not use index 0."""
-        self._queue = [None]
+        self.__queue = [None]
 
     def __greater(self, i, j):
         """Compare that is i greater than j.
@@ -17,11 +17,11 @@ class MinPQ(object):
         Returns:
             A boolean.
         """
-        return self._queue[i] > self._queue[j]
+        return self.__queue[i] > self.__queue[j]
 
     def __exch(self, i, j):
         """Change the index i and j in priority queue."""
-        self._queue[i], self._queue[j] = self._queue[j], self._queue[i]
+        self.__queue[i], self.__queue[j] = self.__queue[j], self.__queue[i]
 
     def __swim(self, k):
         """Helper functions to restore the heap invariant."""
@@ -45,7 +45,7 @@ class MinPQ(object):
         Returns:
             A boolean.
         """
-        return len(self._queue) == 1
+        return len(self.__queue) == 1
 
     def size(self):
         """The length of the priority queue, ignore index 0.
@@ -53,21 +53,21 @@ class MinPQ(object):
         Returns:
             A number.
         """
-        return len(self._queue) - 1
+        return len(self.__queue) - 1
 
 
     def insert(self, v):
         """Insert a value into priority queue."""
-        self._queue.append(v)
+        self.__queue.append(v)
         N = self.size()
         self.__swim(N)
 
     def delMin(self):
         """Remove the maximum of the priority queue."""
         N = self.size()
-        min = self._queue[1]
+        min = self.__queue[1]
         self.__exch(1, N)
-        self._queue.pop()
+        self.__queue.pop()
         self.__sink(1)
         return min
 
