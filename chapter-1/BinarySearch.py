@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     from generator import *
 
-    input = getEscRandomNumbers(0, 10000, 10)
+    data = getEscRandomNumbers(0, 10000, 10)
     index = getRandomNumber(0, 9)
-    print('find key: %s index: %d in %s' % (input[index], index, input))
-    print('return: %s' % BinarySearch(input, input[index]))
+    print('find key: %s index: %d in %s' % (data[index], index, data))
+    print('return: %s' % BinarySearch(data, data[index]))

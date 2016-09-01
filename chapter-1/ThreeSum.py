@@ -79,9 +79,9 @@ class TwoSum(object):
         end = time()
         print('time: %s, count: %d' % (end - start, cnt))
 
-input = noRepeat(getRandomNumbers(-1000, 1000, 100))
+data = noRepeat(getRandomNumbers(-1000, 1000, 100))
 
-TwoSum.count(input)
-TwoSum.countFast(input)
-ThreeSum.count(input)
-ThreeSum.countFast(input)
+TwoSum.count(data)
+TwoSum.countFast(data)
+ThreeSum.count(data)
+ThreeSum.countFast(data)
