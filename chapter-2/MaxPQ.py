@@ -63,7 +63,11 @@ class MaxPQ(object):
         self.__swim(N)
 
     def delMax(self):
-        """Remove the maximum of the priority queue."""
+        """Remove the maximum number of the priority queue.
+
+        Returns:
+            A number: the maximum number
+        """
         N = self.size()
         max = self.__queue[1]
         self.__exch(1, N)

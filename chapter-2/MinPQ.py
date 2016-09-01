@@ -63,7 +63,11 @@ class MinPQ(object):
         self.__swim(N)
 
     def delMin(self):
-        """Remove the maximum of the priority queue."""
+        """Remove the minimum number of the priority queue.
+
+        Returns:
+            A number: the minimum number.
+        """
         N = self.size()
         min = self.__queue[1]
         self.__exch(1, N)
