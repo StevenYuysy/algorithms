@@ -29,3 +29,6 @@ python3 filename.py
 |2.4|[Merge.py](chapter-2/Merge/py)| top-down mergesort && bottom-up mergesort|
 |2.5|[Quick.py](chapter-2/Quick.py)| quick sort |
 | - |[Quick3way.py](chapter-2/Quick3way.py)| quicksort with 3-way partitioning |
+|2.6|[MaxPQ.py(chapter-2/MaxPQ.py)]| max heap priority queue |
+| - |[MinPQ.py](chapter-2/MinPQ.py)| min heap priority queue |
+| - |[Heap.py](chapter-2/Heap.py)| heapsort |
