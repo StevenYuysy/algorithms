@@ -12,7 +12,7 @@ class MinPQ(object):
         self.__queue = [None]
 
     def __greater(self, i, j):
-        """Compare that is i greater than j.
+        """Compare that wether i is greater than j.
 
         Returns:
             A boolean.

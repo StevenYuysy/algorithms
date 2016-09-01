@@ -12,7 +12,7 @@ class MaxPQ(object):
         self.__queue = [None]
 
     def __less(self, i, j):
-        """Compare that is i less than j.
+        """Compare that wehter i is less than j.
 
         Returns:
             A boolean.
