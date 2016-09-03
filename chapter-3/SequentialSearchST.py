@@ -1,4 +1,4 @@
-class __Node(object):
+class Node(object):
 
     def __init__(self, key, val, next):
         self.key = key
@@ -7,36 +7,39 @@ class __Node(object):
 
 class SequentialSearchST(object):
 
-    first = None
+    def __init__(self):
+        self.__first = None
 
     def get(self, key):
-        x = __Node(first)
-        while x! = None:
+        x = self.__first
+        while x != None:
             if key == x.key:
                 return x.val
             x = x.next
         return None
 
     def put(self, key, val):
-        x = __Node(first)
+        x = self.__first
         while x != None:
             if key == x.key:
                 x.val = val
                 return
             x = x.next
-        first = __Node(key, val, first)
+        self.__first = Node(key, val, self.__first)
 
     def contains(self, key):
-        x = __Node(first)
-        while x! = None:
+        x = self.__first
+        while x != None:
             if key == x.key:
                 return True
             x = x.next
         return False
 
     def keys(self):
-        counter = 0
-        x = __node(first)
-        while x! = None:
-            counter += 1
-        return counter
+        array = []
+        x = self.__first
+        while x != None:
+            array.append(x.key)
+            x = x.next
+        array.reverse()
+        return array 
