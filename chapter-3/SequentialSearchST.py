@@ -1,5 +1,16 @@
-class Node(object):
+#! ust/bin/python
+# -*- coding: utf-8 -*-
 
+class _Node(object):
+    """Private Node class, define node root.
+
+    The node class is design like a linked list.
+
+    Attributes:
+        key: The key of the node.
+        val: The value of the node.
+        next: The next of the current node.
+    """
     def __init__(self, key, val, next):
         self.key = key
         self.val = val
@@ -25,7 +36,7 @@ class SequentialSearchST(object):
                 x.val = val
                 return
             x = x.next
-        self.__first = Node(key, val, self.__first)
+        self.__first = _Node(key, val, self.__first)
 
     def contains(self, key):
         x = self.__first
@@ -42,4 +53,4 @@ class SequentialSearchST(object):
             array.append(x.key)
             x = x.next
         array.reverse()
-        return array 
+        return array

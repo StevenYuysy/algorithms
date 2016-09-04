@@ -17,7 +17,6 @@ with open('../test-data/tale.txt') as f:
             else:
                 st.put(word, st.get(word)+1)
 
-
 max = ''
 st.put(max, 0)
 for word in st.keys():
