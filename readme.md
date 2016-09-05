@@ -32,3 +32,11 @@ python3 filename.py
 |2.6|[MaxPQ.py](chapter-2/MaxPQ.py)| max heap priority queue |
 | - |[MinPQ.py](chapter-2/MinPQ.py)| min heap priority queue |
 | - |[Heap.py](chapter-2/Heap.py)| heapsort |
+
+# chapter-3
+
+|REF| PROGRAM | DESCRIPTION |
+|---|---------|-------------|
+| - |[FrequencyCounter.py](chapter-3/FrequencyCounter.py)| frequency counter |
+|3.1|[SequentialSearchST.py](chapter-3/SequentialSearchST.py)| sequential search |
+|3.2|[BinarySearchST.py](chapter-3/BinarySearchST)| binary search |
