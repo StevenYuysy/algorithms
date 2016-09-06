@@ -39,4 +39,5 @@ python3 filename.py
 |---|---------|-------------|
 | - |[FrequencyCounter.py](chapter-3/FrequencyCounter.py)| frequency counter |
 |3.1|[SequentialSearchST.py](chapter-3/SequentialSearchST.py)| sequential search |
-|3.2|[BinarySearchST.py](chapter-3/BinarySearchST)| binary search |
+|3.2|[BinarySearchST.py](chapter-3/BinarySearchST.py)| binary search |
+|3.3|[BST.py](chapter-3/BST.py)| binary search tree |
