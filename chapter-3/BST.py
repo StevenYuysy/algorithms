@@ -50,7 +50,6 @@ class BST(object):
 
         Returns:
             x: root node.
-
         """
         if x == None: return _Node(key, val)
         if key < x.key:
