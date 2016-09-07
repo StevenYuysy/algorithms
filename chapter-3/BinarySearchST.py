@@ -1,3 +1,6 @@
+#! usr/bin/python
+# -*- coding: utf-8 -*-
+
 class BinarySearchST(object):
 
     def __init__(self):
