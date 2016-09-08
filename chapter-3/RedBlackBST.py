@@ -100,8 +100,8 @@ if __name__ == "__main__":
     st = RedBlackBST()
     minlen = int(input('> min length of the word: '))
 
-    print('> searching leipzig1M...')
-    with open('../../algs4-data/leipzig1M.txt') as f:
+    print('> searching tale.txt...')
+    with open('../test-data/tale.txt') as f:
         for dataIn in f.readlines():
             for word in dataIn.strip().split():
                 if len(word) < minlen: continue
