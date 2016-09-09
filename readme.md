@@ -41,3 +41,4 @@ python3 filename.py
 |3.1|[SequentialSearchST.py](chapter-3/SequentialSearchST.py)| sequential search |
 |3.2|[BinarySearchST.py](chapter-3/BinarySearchST.py)| binary search |
 |3.3|[BST.py](chapter-3/BST.py)| binary search tree |
+|3.4|[RedBlackBST.py](chapter-3/RedBlackBST.py)| red black binary search tree |
