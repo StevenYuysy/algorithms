@@ -4,7 +4,7 @@ if __name__ == "__main__":
     minlen = int(input('> min length of the word: '))
 
     print('> searching tale.txt...')
-    with open('../../test-data/tale.txt') as f:
+    with open('../test-data/tale.txt') as f:
         for dataIn in f.readlines():
             for word in dataIn.strip().split():
                 if len(word) < minlen: continue
