@@ -1,6 +1,16 @@
 import math
 
 def Evaluate(input):
+    """
+
+    Push operands onto the operand stack.
+    Push operators onto the operator stack.
+    Ignore left parentheses.
+    On encountering a right parenthesis, pop an operator, pop the requisite
+    number of operands, and push onto the operand stack the result of applying
+    that operator to those operands.
+
+    """
     ops = []
     vals = []
 
