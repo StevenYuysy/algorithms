@@ -1,5 +1,5 @@
 # Algorithms
-A playground for practicing algorithms, base on Algorithms fourth edition.
+A playground for practicing algorithms, based on [Algorithms fourth edition](https://github.com/barretlee/algorithms).
 
 Inspired by [barretlee/algorithms](https://github.com/barretlee/algorithms).
 
