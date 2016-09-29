@@ -70,6 +70,50 @@
 
 > 定义：链表是一种递归的数据结构，它或者为空，或者是指向一个结点（ node ）的引用，该结点含有一个泛型的元素和一个指向另一条链表的引用。
 
+### 结点记录
+
+实现链表之前，我们用一个类来定义结点的抽象数据类型。
+
+```python
+class _Node(object):
+
+    def __init__(self):
+        self.item = None
+        self.next = None
+```
+
+### 构造链表
+
+- 实例化结点类
+- 将每个结点的 item 域设置为所需的值
+- 使用 next 域来构造链表
+
+```python
+first = _Node()
+first.item = 'to'
+
+second = _Node()
+second.item = 'be'
+first.next = second
+
+third = _Node()
+third.item = 'or'
+second.next = third
+```
+![linked list](http://algs4.cs.princeton.edu/13stacks/images/linked-list.png)
+
+
+### 插入结点，删除结点
+
+- 插入节点
+    - 表头，实例化结点类 newfirst 并将其指向 oldfirst
+    - 表尾，实例化结点类并将上一个结点指向自身
+
+- 删除结点
+    - 表头，将自己指向自己，即 first = first.next
+    - 表尾，遍历到最后，并将指向 last 的连接改为 null
+
+![Add-linked-list](http://algs4.cs.princeton.edu/13stacks/images/linked-list-insert-front.png)
 
 # 算法分析
 
